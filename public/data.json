@@ -2,43 +2,56 @@
   {
     "id": 1,
     "title": "Almond Brown Sugar Croissant",
-    "description": "Sweet croissant with topping almonds and brown sugar",
-    "price": "12000",
+    "description": "Sweet flaky croissant topped with toasted sliced almonds and caramelized brown sugar.",
+    "price": 12000,
+    "category": "Croissant",
+    "isSignature": true,
     "img": "./asset/almond-croissant-cookie-recipe-27.webp"
   },
   {
     "id": 2,
     "title": "Smoke Tenderloin Slice Croissant",
-    "description": "Plain croissant with smoke tenderloin beef sliced and vegetable",
-    "price": "10000",
+    "description": "Savory butter croissant filled with smoked beef tenderloin slices and crisp lettuce.",
+    "price": 10000,
+    "category": "Croissant",
+    "isSignature": true,
     "img": "./asset/Roastbeef-croissants-portrait.jpg"
   },
   {
     "id": 3,
     "title": "Berry Whipped Cream Croissant",
-    "description": "Sweet croissant with blueberries and strawberries inside",
-    "price": "8000",
+    "description": "Sweet pastry layered with fresh blueberries, strawberries, and light whipped cream.",
+    "price": 8000,
+    "category": "Croissant",
+    "isSignature": true,
     "img": "./asset/images.jpeg"
   },
   {
     "id": 4,
     "title": "Sweet Granulated Sugar Croissant",
-    "description": "Plain croissant with smoke tenderloin beef sliced and vegetable",
-    "price": "5000",
+    "description": "Classic French butter croissant glazed and dusted with fine granulated sugar.",
+    "price": 5000,
+    "category": "Croissant",
+    "isSignature": false,
     "img": "./asset/chocolate-croissants-2-300x450.webp"
   },
   {
     "id": 5,
     "title": "Sweet Chocolate Chocochips Croissant",
-    "description": "Plain croissant with smoke tenderloin beef sliced and vegetable",
-    "price": "22000",
+    "description": "Rich chocolate-filled croissant topped with dark chocolate drizzle and choco chips.",
+    "price": 22000,
+    "category": "Croissant",
+    "isSignature": true,
     "img": "./asset/IMG_0792.webp"
   },
   {
     "id": 6,
     "title": "Basic Croissant La Ta Dhore",
-    "description": "Plain croissant with smoke tenderloin beef sliced and vegetable",
-    "price": "8000",
+    "description": "Traditional golden-baked butter croissant with a crisp crust and soft honeycomb crumb.",
+    "price": 8000,
+    "category": "Croissant",
+    "isSignature": false,
     "img": "./asset/Croissants-20.webp"
   }
 ]
+

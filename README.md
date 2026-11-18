@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+# La Ta Dhore POS - Kasir Kedai Kopi & Croissant
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Aplikasi Point of Sale (POS) berbasis React, Tailwind CSS, dan DaisyUI untuk operasional kasir kedai kopi dan croissant **La Ta Dhore**.
 
-## Available Scripts
+## Fitur Utama
 
-In the project directory, you can run:
+- **Katalog Menu & Filter Real-Time**: Pencarian berdasarkan nama/deskripsi, filter kategori (`Semua Menu`, `Signature`, `Croissant`, `Waffle`, `Coffee`, `Ice cream`), dan pengurutan harga/nama.
+- **Manajemen Pesanan Aktif (Current Order)**: Penambahan item langsung dari katalog, pengaturan kuantitas (`+`/`-`), pengosongan pesanan, serta sinkronisasi otomatis ke `localStorage`.
+- **Kalkulasi Pembayaran & Kembalian**: Modal pembayaran dengan pilihan nominal uang cepat (`Uang Pas`, `Rp 20.000`, `Rp 50.000`, `Rp 100.000`), validasi nominal kurang bayar, rincian kembalian, dan tombol penyelesaian transaksi untuk pesanan baru.
+- **Mode Terang & Gelap (Light/Dark Mode)**: Sakelar tema yang bekerja penuh di seluruh komponen dengan rasio kontras memenuhi standar WCAG AA.
+- **UI States Lengkap**: Menangani kondisi *loading*, *error* (dengan tombol muat ulang), dan *empty state* (baik pada katalog maupun daftar pesanan).
 
-### `npm start`
+## Catatan Desain (R-31 & R-37)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Status Arah Desain**: *Draft without direction* (Dial: `ENERGY 1 / RHYTHM 1 / MOTION 1`).
+- **Warna**: Permukaan netral *warm stone* (`stone-50`/`stone-100` pada mode terang, `stone-900`/`stone-950` pada mode gelap) dipadukan dengan aksen *roasted amber* (`amber-800` / `#92400e` pada mode terang dan `amber-500` pada mode gelap) untuk merepresentasikan karakter hangat bakery serta menjaga kontras teks di atas 4.5:1.
+- **Tata Letak (Layout)**: Pemisahan dua kolom pada layar desktop (katalog produk di kiri dan tiket pesanan aktif yang *sticky* di kanan) serta bertumpuk (*stacked*) secara responsif pada perangkat seluler agar alur kerja kasir dari memilih produk hingga membayar berjalan satu arah.
+- **Tipografi**: *System sans-serif* demi keterbacaan cepat di layar kasir, dilengkapi `tabular-nums` pada seluruh angka harga, kuantitas, dan kembalian agar digit mata uang sejajar vertikal.
+- **Spasi (Spacing)**: Ritme seragam (`RHYTHM 1`) dengan jarak grid `gap-4` (16px) dan ruang dalam panel `p-5`/`p-6` agar posisi kontrol mudah diprediksi oleh operator kasir.
+- **Kartu Produk (Cards)**: Kartu berbingkai tegas (`border-stone-300`, `rounded-lg`) tanpa bayangan melayang berlebih (`MOTION 1`), mengelompokkan foto rasio 4:3, nama, deskripsi, harga, dan tombol tambah (target sentuh minimum 44px).
+- **Ikon**: Ikon dipilih sesuai kategori produk nyata (`LuCroissant`, `GiCroissant`, `FaStroopwafel`, `PiCoffee`, `LuIceCream2`) dan fungsi kontrol kasir (`MagnifyingGlassIcon`, `TrashIcon`, `ShoppingCartIcon`, `SunIcon`/`MoonIcon`).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Menjalankan Proyek
 
-### `npm test`
+```bash
+npm install
+npm start
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Pengujian & Build Produksi
 
-### `npm run build`
+```bash
+npm test
+npm run build
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
